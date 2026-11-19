@@ -1,0 +1,382 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s1",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "For every finite nonempty $\\mathcal A$,\n$\\mathcal Q_1^{\\mathcal A}=\\mathcal R_1^{\\mathcal A}$.\nEvery family in this set has a realization on $\\C^3$ with\n$U_\\theta=\\diag(e^{-i\\theta},1,e^{i\\theta})$ and a pure state.\nThe state can be chosen as $\\rho=\\psi\\psi^*$, where\n\\[\n \\psi=(\\sqrt t,\\sqrt{1-2t},\\sqrt t)^T,\n \\qquad 0\\leq t\\leq\\tfrac12.\n\\]\nThe parameter $t$ and the POVM may depend on the family $p$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s2",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "Every nonnegative real trigonometric polynomial $f$ of degree at most two\nhas a representation $f=q_Q$ with $Q\\geq0$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s3",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "Suppose $Q_a\\geq0$ and $\\sum_a q_{Q_a}(\\theta)=1$ for all $\\theta$.\nThere are $B_a\\geq0$ with $q_{B_a}=q_{Q_a}$ such that\n\\[\n \\sum_a B_a=C=\\diag(c_0,c_1,c_2),\\qquad\n c_j\\geq0,\\quad c_0+c_1+c_2=1,\\quad c_0=c_2.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s4",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "Every stochastic postprocessing of the outcomes is realized with the same\npure state and rotation representation.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s5",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "For every finite nonempty outcome set,\n$\\mathcal Q_0^{\\mathcal A}=\\mathcal R_0^{\\mathcal A}$ and\n$\\mathcal Q_{1/2}^{\\mathcal A}=\\mathcal R_{1/2}^{\\mathcal A}$.\nThese equalities, proved in \\cite[\\S IV.A, Theorem~5]{AGJLM}, admit\none-dimensional and fixed equatorial-qubit realizations, respectively.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s6",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "At spin one, the positive-Gram feasibility conditions for\n$\\mathcal R_1^{\\mathcal A}$ in \\cite[Lemma~10 and Appendix~B.2]{AGJLM}\nalso characterize $\\mathcal Q_1^{\\mathcal A}$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s7",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "Dimension three is necessary for some spin-one families. In particular,\nthe binary family $p_+=\\tfrac12+(\\cos\\theta+\\cos2\\theta)/8$,\n$p_-=1-p_+$ has no realization in dimension at most two with the\nspin-one spectrum.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s8",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "There is no fixed density state in any fixed finite spin-one representation\nthat realizes every binary spin-one family merely by changing the POVM.\nIn particular, the parameter $t$ in Theorem~\\ref{main} cannot be universal.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s9",
+      "contributor": null,
+      "identity": "collected:spin-one-rotation-boxes:2:s9",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
+      },
+      "lineage": "collected:spin-one-rotation-boxes:s9",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\R": "\\mathbb R",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "spin-one-rotation-boxes",
+      "scope": "in_scope",
+      "statement": "In dimension four, reversal-transpose averaging alone need not turn a\nnormalized Gram matrix into a diagonal one.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
+      "toolchain": null,
+      "version": 2,
+      "work": "spin-one-rotation-boxes"
+    }
+  ]
+}

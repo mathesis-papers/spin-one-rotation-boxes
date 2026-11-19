@@ -1,0 +1,14 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "spin-one-rotation-boxes",
+  "version": 2,
+  "repository_url": "https://github.com/mathesis-papers/spin-one-rotation-boxes",
+  "site_url": "https://papers.trureturing.org/spin-one-rotation-boxes/",
+  "doi": null,
+  "reading": {
+    "en": "https://papers.trureturing.org/spin-one-rotation-boxes/en/",
+    "zh": "https://papers.trureturing.org/spin-one-rotation-boxes/zh/"
+  },
+  "slides": [],
+  "visualizations": []
+}

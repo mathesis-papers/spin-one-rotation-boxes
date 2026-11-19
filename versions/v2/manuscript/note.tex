@@ -1,0 +1,381 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\title{Answering the finite-outcome question of Aloy et al.\ (2024),\\
+arXiv:2312.09278v2, end of \S IV.B.3, p.~17:\\
+an extension of their binary spin-one theorem}
+\author{Haobo Ma\\{\small ChronoAI Pte Ltd, Singapore}
+\and Wenlin Zhang\\{\small National University of Singapore}\\
+{\small ChronoAI Pte Ltd, Singapore}}
+\date{November 11, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending the binary-outcome theorem of Aloy, Galley, Jones, Ludescher and
+M\"uller (2024), we answer yes to their unnumbered question at the end of
+\S IV.B.3 of arXiv:2312.09278v2, p.~17 (\S IV.2.3 in the arXiv HTML):
+$\mathcal Q_1^{\mathcal A}=\mathcal R_1^{\mathcal A}$ for every finite
+outcome set with at least three elements. A positive Gram matrix for each
+degree-two probability polynomial is averaged with its reversed transpose.
+This preserves each polynomial and makes the sum of the matrices diagonal.
+Diagonal normalization then supplies one pure qutrit state and one POVM
+for the whole family, including singular boundary cases.
+\end{abstract}
+\noindent\textbf{License.} CC BY 4.0 (\texttt{cc-by-4.0}).
+
+\section{The question and the result}
+Let $\mathcal A$ be a finite nonempty set. Following Definitions~1 and~2 of
+\cite{AGJLM}, write $\mathcal R_1^{\mathcal A}$ for the families
+$p=(p_a)_{a\in\mathcal A}$ of real trigonometric polynomials of degree at
+most two such that
+\begin{equation}\label{probability}
+ p_a(\theta)\geq0,\qquad \sum_{a\in\mathcal A}p_a(\theta)=1
+ \quad(\theta\in\R).
+\end{equation}
+Each $p_a\leq1$ follows from these conditions.
+The set $\mathcal Q_1^{\mathcal A}$ consists of quantum realizations
+\begin{equation}\label{born}
+ p_a(\theta)=\tr\bigl(U_\theta\rho U_\theta^*E_a\bigr),\qquad
+ U_\theta=\bigoplus_{j=-1}^{1}e^{ij\theta}I_{n_j},
+\end{equation}
+where $n_j$ are finite nonnegative integers, $\rho\geq0$ has trace one,
+and $E_a\geq0$, $\sum_a E_a=I$. The state and all effects are fixed as
+$\theta$ varies. The source says ``do not currently know whether'' the equality
+holds for $|\mathcal A|\geq3$ at the locator above and repeats the question
+in \S VII, p.~27. Its Theorem~6 proves the binary equality, already present
+in the first preprint of December 14, 2023. Its Theorem~1
+already shows that quantum correlations admit pure states in dimension
+$2J+1$; the issue here is whether every general spin-one family is quantum.
+Definitions~1 and~2 in that source assume at least two outcomes. We extend
+the same definitions to a one-element set, for which the only family is $p=1$.
+
+\begin{theorem}\label{main}
+For every finite nonempty $\mathcal A$,
+$\mathcal Q_1^{\mathcal A}=\mathcal R_1^{\mathcal A}$.
+Every family in this set has a realization on $\C^3$ with
+$U_\theta=\diag(e^{-i\theta},1,e^{i\theta})$ and a pure state.
+The state can be chosen as $\rho=\psi\psi^*$, where
+\[
+ \psi=(\sqrt t,\sqrt{1-2t},\sqrt t)^T,
+ \qquad 0\leq t\leq\tfrac12.
+\]
+The parameter $t$ and the POVM may depend on the family $p$.
+\end{theorem}
+
+We give all steps of the construction. In particular, scalar positivity
+alone is not the missing normalization step: the individual Gram matrices
+must have a diagonal sum. The diagonal-sum constraint also appears in the
+semidefinite characterization of fixed-spectrum quantum timelines in
+\cite[\S III.B, Eqs.~(44)--(47)]{Navascues}. Their result characterizes
+quantum timelines by positive matrices with diagonal sum; it does not identify
+all normalized nonnegative degree-two families with those timelines.
+Here the required diagonal sum is obtained for every family
+satisfying \eqref{probability}.
+
+\section{Positive Gram matrices and simultaneous normalization}
+Put $v(\theta)=(e^{-i\theta},1,e^{i\theta})^T$ and
+$q_Q(\theta)=v(\theta)^*Qv(\theta)$ for a $3\times3$ matrix $Q$.
+
+\begin{lemma}\label{scalar}
+Every nonnegative real trigonometric polynomial $f$ of degree at most two
+has a representation $f=q_Q$ with $Q\geq0$.
+\end{lemma}
+This is the degree-two case of the scalar factorization consequence in
+\cite[Lemma~9]{AGJLM}; the following elementary proof also fixes the Gram
+convention used below.
+\begin{proof}
+Choose a minimum $m=f(\alpha)\geq0$, which exists by continuity and
+periodicity. Write
+\[
+ g(s)=f(s+\alpha)-m=C_0+C_1\cos s+S_1\sin s
+                       +C_2\cos(2s)+S_2\sin(2s).
+\]
+Since $g(0)=g'(0)=0$, we have $C_1=-C_0-C_2$ and $S_1=-2S_2$.
+The double-angle identities therefore give
+\begin{equation}\label{factor}
+ g(s)=(1-\cos s)(a+b\cos s+c\sin s),\quad
+ a=C_0-C_2,\quad b=-2C_2,\quad c=-2S_2.
+\end{equation}
+For $s\notin2\pi\mathbb Z$ the second factor is nonnegative because
+$g(s)\geq0$; continuity gives the same conclusion at the remaining points.
+Its minimum is $a-\sqrt{b^2+c^2}$, so $a\geq\sqrt{b^2+c^2}$.
+Consequently
+\[
+ H=\frac12\begin{pmatrix}a&b-ic\\b+ic&a\end{pmatrix}\geq0,
+ \qquad T=\begin{pmatrix}1&-1&0\\0&1&-1\end{pmatrix}.
+\]
+Indeed, the eigenvalues of $H$ are $(a\pm\sqrt{b^2+c^2})/2$.
+For $z=e^{is}$ and $w=(1,z,z^2)^T$, one has
+$Tw=(1-z)(1,z)^T$ and $|1-z|^2/2=1-\cos s$.
+Thus \eqref{factor} equals $w^*(T^*HT/2)w$.
+Adding $m e_0e_0^*$, with $e_0=(1,0,0)^T$, gives a positive matrix
+$K=m e_0e_0^*+T^*HT/2$ representing $f(s+\alpha)$.
+Now set $L=\diag(1,e^{-i\alpha},e^{-2i\alpha})$ and $Q=L^*KL$.
+Then $Q\geq0$ and $f(\theta)=w_\theta^*Qw_\theta=q_Q(\theta)$,
+where $w_\theta=(1,e^{i\theta},e^{2i\theta})^T
+=e^{i\theta}v(\theta)$; the last equality removes a common unit phase.
+\end{proof}
+
+\begin{lemma}\label{normalization}
+Suppose $Q_a\geq0$ and $\sum_a q_{Q_a}(\theta)=1$ for all $\theta$.
+There are $B_a\geq0$ with $q_{B_a}=q_{Q_a}$ such that
+\[
+ \sum_a B_a=C=\diag(c_0,c_1,c_2),\qquad
+ c_j\geq0,\quad c_0+c_1+c_2=1,\quad c_0=c_2.
+\]
+\end{lemma}
+\begin{proof}
+Let $J$ reverse the three coordinates, and define
+\[
+ B_a=\tfrac12(Q_a+JQ_a^TJ).
+\]
+Transposition and conjugation by $J$ preserve positivity, so $B_a\geq0$.
+Since $J\overline{v(\theta)}=v(\theta)$, transposing the scalar quadratic
+form shows $q_{JQ^TJ}=q_Q$. Entrywise, $B_{01}=B_{12}$ and
+$B_{00}=B_{22}$. These relations pass to $C=\sum_a B_a$.
+On the other hand,
+\[
+ q_C(\theta)=\tr C+(C_{01}+C_{12})e^{i\theta}
+ +(C_{10}+C_{21})e^{-i\theta}
+ +C_{02}e^{2i\theta}+C_{20}e^{-2i\theta}=1.
+\]
+Uniqueness of the Fourier coefficients gives $\tr C=1$,
+$C_{02}=C_{20}=0$ and $C_{01}+C_{12}=C_{10}+C_{21}=0$.
+Together with the entry equalities, these make $C$ diagonal.
+Its diagonal is nonnegative because $C\geq0$.
+\end{proof}
+
+\section{One state and one measurement}
+\begin{proof}[Proof of Theorem~\ref{main}]
+Apply Lemmas~\ref{scalar} and~\ref{normalization} to $p$.
+Put $D=\diag(\sqrt{c_0},\sqrt{c_1},\sqrt{c_2})$ and let $P$ project onto
+the coordinates with $c_j>0$. Let $M$ be diagonal with entry
+$c_j^{-1/2}$ when $c_j>0$ and entry zero otherwise.
+If $c_j=0$, positivity and $\sum_a(B_a)_{jj}=0$ imply
+$(B_a)_{jj}=0$ for every $a$. Each two-coordinate principal minor then
+gives $|(B_a)_{jk}|^2\leq(B_a)_{jj}(B_a)_{kk}=0$.
+Hence $PB_aP=B_a$, including on the singular boundary.
+
+Writing $r=|\mathcal A|$, define
+\begin{equation}\label{effects}
+ E_a=MB_aM+\frac1r(I-P).
+\end{equation}
+Both summands are positive, and
+$\sum_aE_a=MCM+I-P=P+I-P=I$.
+Furthermore, $DM=MD=P$ and $D(I-P)=0$, so
+$DE_aD=B_a$.
+Let $\psi=D(1,1,1)^T$ and $\rho=\psi\psi^*$.
+Then $\|\psi\|^2=\tr C=1$ and $U_\theta\psi=Dv(\theta)$.
+It follows for every outcome and every real angle that
+\[
+ \tr(U_\theta\rho U_\theta^*E_a)
+ =v(\theta)^*DE_aDv(\theta)=q_{B_a}(\theta)=p_a(\theta).
+\]
+Since $c_0=c_2$, the state has the displayed form with $t=c_0$.
+Conversely, a realization \eqref{born} gives nonnegative probabilities
+summing to one. Expanding its finite matrix trace produces frequencies
+$j-k\in\{-2,-1,0,1,2\}$, even with arbitrary finite multiplicities.
+Thus it belongs to $\mathcal R_1^{\mathcal A}$.
+\end{proof}
+
+\begin{corollary}\label{postprocessing}
+Every stochastic postprocessing of the outcomes is realized with the same
+pure state and rotation representation.
+\end{corollary}
+\begin{proof}
+For a stochastic matrix $K(b\mid a)\geq0$ with $\sum_bK(b\mid a)=1$,
+the effects $F_b=\sum_aK(b\mid a)E_a$ are positive, sum to $I$, and give
+$\sum_a K(b\mid a)p_a(\theta)$ by linearity of the trace.
+\end{proof}
+
+\section{Consequences and the dimension boundary}
+\begin{corollary}\label{lower}
+For every finite nonempty outcome set,
+$\mathcal Q_0^{\mathcal A}=\mathcal R_0^{\mathcal A}$ and
+$\mathcal Q_{1/2}^{\mathcal A}=\mathcal R_{1/2}^{\mathcal A}$.
+These equalities, proved in \cite[\S IV.A, Theorem~5]{AGJLM}, admit
+one-dimensional and fixed equatorial-qubit realizations, respectively.
+\end{corollary}
+\begin{proof}
+For constants $p_a=c_a$, take the scalar state $1$ and effects $c_a$.
+For $p_a=c_a+u_a\cos\theta+v_a\sin\theta$, positivity gives
+$c_a\geq\sqrt{u_a^2+v_a^2}$. The matrices
+\[
+ E_a=\begin{pmatrix}c_a&u_a-iv_a\\u_a+iv_a&c_a\end{pmatrix}
+\]
+are therefore positive, and normalization gives $\sum_a E_a=I_2$.
+With $\psi=(1,1)^T/\sqrt2$ and
+$U_\theta=\diag(e^{-i\theta/2},e^{i\theta/2})$, their Born probabilities
+are exactly $p_a$. The reverse inclusions follow by expanding the trace.
+\end{proof}
+
+\begin{corollary}\label{sdp}
+At spin one, the positive-Gram feasibility conditions for
+$\mathcal R_1^{\mathcal A}$ in \cite[Lemma~10 and Appendix~B.2]{AGJLM}
+also characterize $\mathcal Q_1^{\mathcal A}$.
+\end{corollary}
+\begin{proof}
+Those conditions ask for $Q_a\geq0$ representing the prescribed Fourier
+coefficients, with the polynomials summing to one. Lemma~\ref{normalization}
+and \eqref{effects} turn every feasible family into a quantum realization.
+Conversely a quantum realization supplies nonnegative normalized
+polynomials, hence feasible Gram matrices by Lemma~\ref{scalar}.
+Unlike the general fixed-spectrum formulation in \cite{Navascues}, at
+spin one no additional diagonal-sum feasibility constraint is needed.
+\end{proof}
+
+\begin{corollary}\label{dimension}
+Dimension three is necessary for some spin-one families. In particular,
+the binary family $p_+=\tfrac12+(\cos\theta+\cos2\theta)/8$,
+$p_-=1-p_+$ has no realization in dimension at most two with the
+spin-one spectrum.
+\end{corollary}
+\begin{proof}
+Both probabilities lie in $[1/4,3/4]$, so Theorem~\ref{main} applies.
+A space of dimension at most two contains at most two distinct frequency
+labels. Its trace expansion has at most one nonzero positive frequency
+difference, whereas $p_+$ has nonzero coefficients at both one and two.
+Uniqueness of Fourier coefficients rules out such a realization.
+\end{proof}
+
+\begin{corollary}\label{fixedstate}
+There is no fixed density state in any fixed finite spin-one representation
+that realizes every binary spin-one family merely by changing the POVM.
+In particular, the parameter $t$ in Theorem~\ref{main} cannot be universal.
+\end{corollary}
+\begin{proof}
+Suppose a fixed state $\rho=\sum_k\lambda_k\phi_k\phi_k^*$, with
+$\lambda_k>0$ and unit $\phi_k$, realizes
+$p_+(\theta)=(1+\cos2\theta)/2$ with an effect $0\leq E\leq I$.
+The values one at zero and zero at $\pi/2$ imply
+$E\phi_k=\phi_k$ and $EU_{\pi/2}\phi_k=0$ for every $k$.
+Hence $\langle\phi_k,U_{\pi/2}\phi_k\rangle=0$.
+Decompose $\phi_k$ into the frequency subspaces $-1,0,1$.
+The real part of this inner product is $\|(\phi_k)_0\|^2$, so every
+middle-frequency component vanishes. Consequently every measurement on
+the orbit of $\rho$ has only frequencies zero and $\pm2$, and cannot give
+$(1+\cos\theta)/2$. For the balanced pure state, absence of the middle
+component specifically forces $t=1/2$.
+\end{proof}
+This orbit obstruction complements the discussion in \cite[\S IV.B.3]{AGJLM}.
+It is not a refutation of an assertion made there. The stronger
+no-linear-embedding theorem for the entire spin-one GPT remains the
+prior result \cite[Lemma~18]{AGJLM}.
+
+\begin{corollary}\label{boundary}
+In dimension four, reversal-transpose averaging alone need not turn a
+normalized Gram matrix into a diagonal one.
+\end{corollary}
+\begin{proof}
+Let $w=(1,e^{i\theta},e^{2i\theta},e^{3i\theta})^T$ and set
+\[
+ C=\tfrac14 I_4+\tfrac1{16}
+ \begin{pmatrix}0&1&0&0\\1&0&-2&0\\0&-2&0&1\\0&0&1&0\end{pmatrix}.
+\]
+The absolute off-diagonal row sums are at most $3/16$; the inequality
+$2|\overline{x_i}x_j|\leq|x_i|^2+|x_j|^2$ therefore gives
+$x^*Cx\geq\|x\|^2/16$. Thus $C$ is positive. Its off-diagonal sums
+at each nonzero frequency vanish, so $w^*Cw=1$. Yet $J_4 C^T J_4=C$
+is not diagonal, where $J_4$ reverses the four coordinates.
+\end{proof}
+The implication tested in Corollary~\ref{boundary} is not asserted in the
+source. The higher-spin gaps of \cite[\S IV.C]{AGJLM} remain unchanged.
+
+\section{Coverage and verification}
+\begin{longtable}{@{}p{.42\linewidth}p{.53\linewidth}@{}}
+\toprule
+Source item in \cite{AGJLM} & Coverage\\
+\midrule
+End of \S IV.B.3, p.~17; repeated in \S VII, p.~27:
+$|\mathcal A|\geq3$
+ & Answered: yes, by Theorem~\ref{main}.\\
+Theorem~1: pure $(2J+1)$-dimensional quantum realization
+ & Prior proof cited. Theorem~\ref{main} additionally supplies balanced
+ outer populations for every general spin-one family.\\
+Theorem~6: binary $\mathcal Q_1=\mathcal R_1$
+ & Reproved; prior proof by Aloy et al.\ (2023 preprint; 2024 journal) credited.\\
+Lemma~9: positive scalar Gram representation
+ & Reproved in degree two in Lemma~\ref{scalar}; prior general
+ factorization result cited.\\
+\S IV.A: spin zero and spin one-half
+ & Reproved; prior proofs by Aloy et al.\ (2023/2024),
+ Corollary~\ref{lower}, with the correct lower-spin dimensions.\\
+Lemma~10, Appendix~B.2 and the discussion after Lemma~11
+ & Not posed; proved consequence at spin one: the rotation-box SDP also characterizes
+ quantum boxes (Corollary~\ref{sdp}); compare the general quantum
+ characterization of Manos et al.\ (2025/2026).\\
+\S IV.B.3: dependence on the qutrit orbit
+ & The discussion is respected. Not posed as a universal fixed-state
+ claim; obstruction proved in Corollary~\ref{fixedstate}.\\
+Lemma~18: no finite quantum embedding of the GPT
+ & Prior proof cited; compatible with a family-dependent state.\\
+\S IV.B.1 and Lemmas~16--17: facial structure and distinguishability
+ & Prior results not covered; no change to the source's GPT distinctions.\\
+Dimension optimality; stochastic postprocessing
+ & Not posed; proved in Corollaries~\ref{dimension} and~\ref{postprocessing}.\\
+Reversal normalization at degree three
+ & Not asserted in the source; the diagonalization implication fails
+ for the matrix in Corollary~\ref{boundary}.\\
+\S IV.C: higher-spin gaps; \S IV.D--F: approximation, two-angle
+ restrictions and classicality; \S V: Bell correlations;
+ \S VI: representation-theoretic reformulations
+ & Prior results not covered by this construction.\\
+\bottomrule
+\end{longtable}
+
+The universal statements and the scalar Gram construction have written
+proofs above. The pinned Lean declaration
+\begin{quote}\small\ttfamily
+D5.S3.Quantum.Measurement.RotationBoxes.\\
+SpinOneRotationBoxes.result
+\end{quote}
+states the equivalence of
+\texttt{QuantumSpinOne} and \texttt{RotationSpinOne} for every finite
+outcome type of cardinality at least three; its definitions include finite
+frequency multiplicities, a density state and a single normalized positive
+measurement. The exact source is
+\href{https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean}{\texttt{SpinOneRotationBoxes.lean} at \texttt{4b14c77599ed}}.
+The stronger displayed pure-state and balanced-population form is supplied
+by the written construction, rather than by the statement of that declaration.
+
+Within the same file, \texttt{simultaneous\_\allowbreak diagonal\_\allowbreak normalization}
+states preservation of the Gram polynomials, positivity, a diagonal
+trace-one sum and equality of its outer diagonal entries;
+\texttt{gram\_\allowbreak family\_\allowbreak quantum} states the passage from positive
+diagonal-sum matrices to a quantum realization. Both are auxiliary
+ declarations. The one-outcome extension and Corollaries~\ref{lower}--\ref{boundary}
+have the written proofs given here.
+
+The accompanying programs check the scalar factorization,
+reversal-transpose and support-normalization identities, the source's
+binary example, a specified finite catalog of three- and four-outcome
+Gaussian-integer Gram families, and the displayed corollary formulas.
+These finite and symbolic checks support the algebraic steps; the
+universal conclusions follow from the written proofs, not enumeration.
+
+\begin{thebibliography}{9}
+\bibitem{AGJLM}
+A. Aloy, T. D. Galley, C. L. Jones, S. L. Ludescher and M. P. M\"uller,
+\emph{Spin-bounded correlations: rotation boxes within and beyond quantum theory},
+Communications in Mathematical Physics \textbf{405}, 292 (2024).
+\href{https://doi.org/10.1007/s00220-024-05123-2}{doi:10.1007/s00220-024-05123-2};
+\href{https://arxiv.org/abs/2312.09278v2}{arXiv:2312.09278v2}.
+First preprint: \href{https://arxiv.org/abs/2312.09278v1}{v1}, December 14, 2023.
+
+\bibitem{Navascues}
+K. Manos, M. Weilenmann and M. Navascu\'es,
+\emph{Timed demolition measurements},
+\href{https://arxiv.org/abs/2507.06912v2}{arXiv:2507.06912v2}
+(2025; revised March 4, 2026), \S III.B, Eqs.~(44)--(47).
+\end{thebibliography}
+\end{document}

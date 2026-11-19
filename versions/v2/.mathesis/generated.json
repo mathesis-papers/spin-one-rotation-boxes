@@ -1,0 +1,42 @@
+{
+  "generated_paths": [
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "CONTRIBUTING.md",
+    "LICENSES/CC-BY-4.0.txt",
+    "README.md",
+    "formalization/nodes.json",
+    "manuscript/MANIFEST.sha256",
+    "manuscript/README.md",
+    "manuscript/metadata.json",
+    "manuscript/note.tex",
+    "manuscript/verification.txt",
+    "manuscript/verify.py",
+    "manuscript/verify_corollaries.py",
+    "manuscript/verify_scalar.py",
+    "paper.json",
+    "paper.pdf",
+    "source.archive"
+  ],
+  "generator_version": "0.1.0",
+  "sha256": {
+    "CHANGELOG.md": "5b1cb0eeee6aed5954dceaa270f8ef6217deea2216fae7d2e7108a4a78306638",
+    "CITATION.cff": "c07abdb5b52a5e67e61b828c88f6480a7cfcb55464606cb1a96204db9c361fd8",
+    "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
+    "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
+    "README.md": "f20590ff6c683858138be5297afdc2885532b3cd736498869769cddcdbd8ab3b",
+    "formalization/nodes.json": "9a2f533b7bc353907fe07c616adf20515f1e154a0b4f581f0fdf5056e6c2fa28",
+    "manuscript/MANIFEST.sha256": "1f4485335a86f4af1b8fecf7bcbbc4b7de52ed754230a9be12ca087a2907e0ae",
+    "manuscript/README.md": "bc7f56b39bfa1df61000edb0ecf8adb30b257955822c055cdc15eb6b4632ea08",
+    "manuscript/metadata.json": "78d67dd90141ee894e84aa22afe6cf0403d58d5bb15d001de6dc44cc28c33817",
+    "manuscript/note.tex": "5dbff3d588fc502d19e58e447be24a9412658dfa1d3668738f6f14c293d9317d",
+    "manuscript/verification.txt": "1823193131ea11b5297d222d97432401deb9296bc488a8020b49eb1895e92b72",
+    "manuscript/verify.py": "5e1f7ca14b457b8b9499d3c99d4272c07711f0cd58308879a923774487874ca2",
+    "manuscript/verify_corollaries.py": "3086021b7832c84a72537e163cae99dbdcd76397e3c8091631e946f348fbafa0",
+    "manuscript/verify_scalar.py": "6d497c0435ded189e537c44aa7bd97d1effc41ac9edd5a64a89498ff1a6d2194",
+    "paper.json": "7d580579ae5f9387e4c64d94044472e546136759a66903e5a286fb5f06a1ae88",
+    "paper.pdf": "a5de02377457244209ac992f4c6513cb6dc7d1b161a43c0e7fa2706c59f0ea7e",
+    "source.archive": "537449af9f7245ff2d236654a888d3cb56f9f24f2674e76cd8a82366e137df95"
+  },
+  "snapshot_identity": "dd37ea5eb73a4f9c9b03cbc760491166b6066765ad48620c974025db531286fd"
+}

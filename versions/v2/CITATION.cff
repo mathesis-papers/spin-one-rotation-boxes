@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-19"
+version: "2"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/spin-one-rotation-boxes?version=2"
+license: "CC-BY-4.0"
