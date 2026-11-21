@@ -5,13 +5,15 @@
 Extending the binary-outcome theorem of Aloy, Galley, Jones, Ludescher and Müller (2024), we answer yes to their unnumbered question at the end of §IV.B.3 of arXiv:2312.09278v2, p. 17 (§IV.2.3 in the arXiv HTML): quantum and general spin-one rotation correlations coincide for every finite outcome set with at least three elements. Reversal-transpose averaging preserves each positive Gram polynomial and makes the total Gram matrix diagonal. Diagonal normalization yields one pure qutrit state and one POVM for the complete probability family, including singular boundary cases.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24369131](https://doi.org/10.5281/zenodo.24369131)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24369130](https://doi.org/10.5281/zenodo.24369130)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [spin-one-rotation-boxes](https://mathesis-omega-research.apps.chrono-ai.fun/papers/spin-one-rotation-boxes?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/spin-one-rotation-boxes?version=2
+Haobo Ma, Wenlin Zhang (2026). Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem. Mathesis, version 2. https://doi.org/10.5281/zenodo.24369131
 
 ## Statement progress
 

@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24369130",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24369131",
     "lean_source": {
       "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
       "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
