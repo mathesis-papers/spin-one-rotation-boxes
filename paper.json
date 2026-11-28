@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24369130",
     "current_version": 2,
     "doi": "10.5281/zenodo.24369131",
+    "kind": "note",
     "lean_source": {
       "revision": "4b14c77599edfd8a52c0a7926d038f4121ca7db1",
       "url": "https://github.com/the-omega-institute/trureturing/blob/4b14c77599edfd8a52c0a7926d038f4121ca7db1/D5/S3/Quantum/Measurement/RotationBoxes/SpinOneRotationBoxes.lean"
@@ -55,10 +56,12 @@
     "title": "Answering the finite-outcome question of Aloy et al. (2024), arXiv:2312.09278v2, end of §IV.B.3, p. 17: an extension of their binary spin-one theorem",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-19T13:07:59.062276321Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "spin-one-rotation-boxes"
